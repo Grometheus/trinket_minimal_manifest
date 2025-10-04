@@ -702,7 +702,6 @@
     <remove-project name="platform/packages/modules/ModuleMetadata" />
     <remove-project name="platform/packages/modules/NetworkPermissionConfig" />
     <remove-project name="platform/packages/modules/NetworkStack" />
-    <remove-project name="platform/packages/modules/NeuralNetworks" />
     <remove-project name="platform/packages/modules/TestModule"/>
     <remove-project name="platform/packages/modules/Virtualization" />
     <remove-project name="platform/packages/modules/vndk" />
