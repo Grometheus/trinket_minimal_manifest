@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="https://android-review.googlesource.com/" />
+  <default revision="refs/tags/android-12.1.0_r4"
+           remote="aosp"
+           sync-j="4" />
+
+  <contactinfo bugurl="go/repo-bug" />
+  
+  <project path="external/libpng" name="platform/external/libpng" groups="pdk" />
+
+    <project name="platform/external/libpng" path="external/libpng"/>
+    <project name="platform/external/zlib" path="external/zlib" />
+    <project name="platform/external/freetype" path="external/freetype"/>
+
+
+
+</manifest>
