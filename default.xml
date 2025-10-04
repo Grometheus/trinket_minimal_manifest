@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github" fetch="https://github.com/" />
+  <default revision="main" remote="github" sync-j="4" />
+
+  <!-- Core build system (required) -->
+  <project path="build/make" name="LineageOS/android_build" />
+  <project path="build/soong" name="LineageOS/android_build_soong" />
+  <project path="system/core" name="LineageOS/android_system_core" />
+
+  <!-- Your custom project -->
+  <project path="device/palimpsest/drm_hello"
+           name="Grometheus/trinket_minimal_manifest" />
+
+</manifest>
