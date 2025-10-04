@@ -17,9 +17,9 @@
 
    <project name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="LineageOS" revision="lineage-19.1" />
     
-
-  <project path="external/libpng" name="platform/external/libpng" groups="pdk" remote="aosp" />
-  <project path="external/zlib" name="platform/external/zlib" groups="pdk" remote="aosp" />
+    <project name="platform/external/libpng" path="external/libpng" remote="aosp" revision="android-12.1.0_r1" />
+    <project name="platform/external/zlib" path="external/zlib" remote="aosp" revision="android-12.1.0_r1" />
+    <project name="platform/external/freetype" path="external/freetype" remote="aosp" revision="android-12.1.0_r1" />
 
     <project path="device/drm_tester"
              name="Grometheus/minimal_drm_tester.git"
