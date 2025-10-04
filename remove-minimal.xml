@@ -103,6 +103,7 @@
     <remove-project name="platform/external/apache-commons-math"/>
     <remove-project name="platform/external/arm-neon-tests"/>
     <remove-project name="platform/external/arm-trusted-firmware"  />
+    <remove-project name="platform/external/auto"  />
     <remove-project name="platform/external/autotest"/>
     <remove-project name="platform/external/android-nn-driver" />
     <remove-project name="platform/external/armnn"  />
@@ -143,6 +144,7 @@
     <remove-project name="platform/external/easymock"/>
     <remove-project name="platform/external/eigen"  />
     <remove-project name="platform/external/emma"/>
+    <remove-project name="platform/external/error_prone"  />
     <remove-project name="platform/external/escapevelocity"  />
     <remove-project name="platform/external/ethtool"  />
     <remove-project name="platform/external/exoplayer"  />
