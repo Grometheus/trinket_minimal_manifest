@@ -16,7 +16,7 @@
 
 
     <project path="device/drm_tester"
-             name="https://github.com/Grometheus/minimal_drm_tester"
+             name="Grometheus/minimal_drm_tester.git"
              remote="github"
              revision="main" />
 
