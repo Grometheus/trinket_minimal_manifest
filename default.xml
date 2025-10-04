@@ -4,42 +4,108 @@
     <remote name="TeamWin" fetch="https://github.com/TeamWin" />
     <remote name="LineageOS" fetch="https://github.com/LineageOS" />
     <remote name="github" fetch="https://github.com" />
-    <remote  name="aosp"
-           fetch="https://android.googlesource.com"
-           review="https://android-review.googlesource.com/" />
+    <remote
+        name="aosp"
+        fetch="https://android.googlesource.com"
+        review="https://android-review.googlesource.com/"
+    />
+
     <!-- Use TeamWin repos for full recovery compatibility -->
-
-    <project path="build/make" name="android_build" remote="TeamWin" revision="android-12.1" groups="pdk">
-        <copyfile src="core/root.mk" dest="Makefile"/>
-        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk"/>
-        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default"/>
-        <linkfile src="core" dest="build/core"/>
-        <linkfile src="envsetup.sh" dest="build/envsetup.sh"/>
-        <linkfile src="target" dest="build/target"/>
-        <linkfile src="tools" dest="build/tools"/>
+    <project
+        path="build/make"
+        name="android_build"
+        remote="TeamWin"
+        revision="android-12.1"
+        groups="pdk"
+    >
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
     </project>
-    <project path="build/soong" name="android_build_soong" remote="TeamWin" revision="android-12.1">
-        <linkfile src="root.bp" dest="Android.bp"/>
-        <linkfile src="bootstrap.bash" dest="bootstrap.bash"/>
+
+    <project
+        path="build/soong"
+        name="android_build_soong"
+        remote="TeamWin"
+        revision="android-12.1"
+    >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
-    <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" remote="LineageOS" revision="lineage-19.1"/>
 
-<project path="vendor/twrp" name="android_vendor_twrp" remote="TeamWin" revision="android-12.1" />
+    <project
+        path="prebuilts/tools-lineage"
+        name="android_prebuilts_tools-lineage"
+        remote="LineageOS"
+        revision="lineage-19.1"
+    />
 
-   <project name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="LineageOS" revision="lineage-19.1" />
-        <project path="device/drm_tester"
-             name="Grometheus/minimal_drm_tester.git"
-             remote="github"
-             revision="main" />
-    <project path="device/miniuitwrp"
-             name="Grometheus/minuitwrp.git"
-             remote="github"
-             revision="main" />
-    <project path="device/soong"
-             name="Grometheus/deviceSoong.git"
-             remote="github"
-             revision="main"
-     />
+    <project
+        path="vendor/twrp"
+        name="android_vendor_twrp"
+        remote="TeamWin"
+        revision="android-12.1"
+    />
 
-  <include name="android.xml" />
-</manifest>
+    <project path="external/icu" name="android_external_icu" remote="TeamWin" revision="android-12.1"/>
+    <project path="external/libxml2" name="android_external_libxml2" remote="TeamWin" revision="android-12.1"/>
+    <project path="external/python3" name="android_external_python3" remote="TeamWin" revision="android-12.1"/>
+    <project path="external/sqlite" name="android_external_sqlite" remote="TeamWin" revision="android-12.1"/>
+    <project path="packages/modules/adb" name="android_packages_modules_adb" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/core" name="android_system_core" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/libhidl" name="android_system_libhidl" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/libhwbinder" name="android_system_libhwbinder" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/security" name="android_system_security" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/update_engine" name="android_system_update_engine" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/vold" name="android_system_vold" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/extras" name="android_system_extras" remote="TeamWin" revision="android-12.1"/>
+
+    <project
+        name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9"
+        path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"
+        groups="pdk,linux,arm"
+        clone-depth="1"
+        remote="LineageOS"
+        revision="lineage-19.1"
+    />
+
+    <project
+        path="device/drm_tester"
+        name="Grometheus/minimal_drm_tester.git"
+        remote="github"
+        revision="main"
+    />
+
+    <project
+        path="device/miniuitwrp"
+        name="Grometheus/minuitwrp.git"
+        remote="github"
+        revision="main"
+    />
+
+    <project
+        path="device/soong"
+        name="Grometheus/deviceSoong.git"
+        remote="github"
+        revision="main"
+    />
+
+
+
+    <include name="android.xml" />
+
+
+    <!-- Common qcom repos -->
+    <project name="android_device_qcom_common" path="device/qcom/common" remote="TeamWin" revision="android-12.1" />
+    <project name="android_device_qcom_twrp-common" path="device/qcom/twrp-common" remote="TeamWin" revision="android-12.1" />
+    <project name="android_hardware_qcom_bootctrl" path="hardware/qcom-caf/bootctrl" remote="LineageOS" revision="lineage-19.1-caf" />
+    <project name="android_vendor_qcom_opensource_display-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/display" remote="LineageOS" revision="lineage-19.1" />
+    <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="LineageOS" revision="lineage-19.1" />
+    <project name="android_vendor_qcom_opensource_vibrator" path="vendor/qcom/opensource/vibrator" remote="LineageOS" revision="lineage-19.1" />
+
+
+</manifest>/manifest>
