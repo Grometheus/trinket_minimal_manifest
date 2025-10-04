@@ -15,8 +15,8 @@
    <project name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="LineageOS" revision="lineage-19.1" />
 
 
-    <project path="device/palimpsest/drm_hello"
-             name="Palimpsest/android_device_drm_hello"
+    <project path="device/drm_tester"
+             name="https://github.com/Grometheus/minimal_drm_tester"
              remote="github"
              revision="main" />
 
