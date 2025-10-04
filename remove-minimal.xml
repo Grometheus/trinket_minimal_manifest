@@ -181,6 +181,7 @@
     <remove-project name="platform/external/google-fruit"  />
     <remove-project name="platform/external/google-java-format"  />
     <remove-project name="platform/external/google-styleguide"  />
+    <remove-project name="platform/external/guava"/>
     <remove-project name="platform/external/guice"/>
     <remove-project name="platform/external/hamcrest"/>
     <remove-project name="platform/external/harfbuzz_ng"/>
@@ -201,6 +202,7 @@
     <remove-project name="platform/external/jacoco"/>
     <remove-project name="platform/external/jarjar"/>
     <remove-project name="platform/external/javaparser"  />
+    <remove-project name="platform/external/javapoet"  />
     <remove-project name="platform/external/javasqlite"/>
     <remove-project name="platform/external/javassist"  />
     <remove-project name="platform/external/jcommander"/>
@@ -212,6 +214,7 @@
     <remove-project name="platform/external/jsmn"/>
     <remove-project name="platform/external/jsr305"/>
     <remove-project name="platform/external/jsr330"/>
+    <remove-project name="platform/external/junit"/>
     <remove-project name="platform/external/junit-params"/>
     <remove-project name="platform/external/kernel-headers"/>
     <remove-project name="platform/external/kotlinc"  />
