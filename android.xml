@@ -10,6 +10,8 @@
 
   <contactinfo bugurl="go/repo-bug" />
   
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="pdk" clone-depth="1" />
+  <project path="prebuilts/bundletool" name="platform/prebuilts/bundletool" groups="pdk" clone-depth="1" />
 
   <project name="platform/external/libpng" path="external/libpng"/>
   <project name="platform/external/zlib" path="external/zlib" />
