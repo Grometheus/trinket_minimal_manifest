@@ -25,5 +25,6 @@
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="linux,pdk,tradefed" clone-depth="1" />
   <project path="external/golang-protobuf" name="platform/external/golang-protobuf" groups="pdk" />
-
+  <project path="external/squashfs-tools" name="platform/external/squashfs-tools" groups="pdk" />
+  <project path="external/starlark-go" name="platform/external/starlark-go" groups="pdk" />
 </manifest>
