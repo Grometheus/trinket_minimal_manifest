@@ -700,7 +700,6 @@
     <remove-project name="platform/packages/modules/GeoTZ" />
     <remove-project name="platform/packages/modules/ModuleMetadata" />
     <remove-project name="platform/packages/modules/NetworkPermissionConfig" />
-    <remove-project name="platform/packages/modules/NetworkStack" />
     <remove-project name="platform/packages/modules/TestModule"/>
     <remove-project name="platform/packages/modules/Virtualization" />
     <remove-project name="platform/packages/modules/vndk" />
@@ -765,7 +764,6 @@
     <remove-project name="platform/prebuilts/maven_repo/bumptech"/>
     <remove-project name="platform/prebuilts/module_sdk/art" />
     <remove-project name="platform/prebuilts/module_sdk/conscrypt" />
-    <remove-project name="platform/prebuilts/module_sdk/Connectivity" />
     <remove-project name="platform/prebuilts/module_sdk/IPsec" />
     <remove-project name="platform/prebuilts/module_sdk/Media" />
     <remove-project name="platform/prebuilts/module_sdk/MediaProvider" />
