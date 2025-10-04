@@ -22,7 +22,7 @@
         <linkfile src="root.bp" dest="Android.bp"/>
         <linkfile src="bootstrap.bash" dest="bootstrap.bash"/>
     </project>
-
+    <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" remote="LineageOS" revision="lineage-19.1"/>
 
 <project path="vendor/twrp" name="android_vendor_twrp" remote="TeamWin" revision="android-12.1" />
 
