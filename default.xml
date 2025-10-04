@@ -34,7 +34,12 @@
     <project path="device/miniuitwrp"
              name="Grometheus/minuitwrp.git"
              remote="github"
-    revision="main" />
+             revision="main" />
+    <project path="device/soong"
+             name="Grometheus/deviceSoong.git"
+             remote="github"
+             revision="main"
+     />
 
   <include name="android.xml" />
 </manifest>
