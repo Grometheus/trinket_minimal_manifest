@@ -4,6 +4,9 @@
     <remote name="TeamWin" fetch="https://github.com/TeamWin" />
     <remote name="LineageOS" fetch="https://github.com/LineageOS" />
     <remote name="github" fetch="https://github.com" />
+    <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="https://android-review.googlesource.com/" />
     <!-- Use TeamWin repos for full recovery compatibility -->
 
     <project path="build/make" name="android_build" remote="TeamWin" revision="android-12.1" groups="pdk">
@@ -15,8 +18,8 @@
    <project name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="LineageOS" revision="lineage-19.1" />
     
 
-  <project path="external/libpng" name="platform/external/libpng" groups="pdk" />
-  <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
+  <project path="external/libpng" name="platform/external/libpng" groups="pdk" remote="aosp" />
+  <project path="external/zlib" name="platform/external/zlib" groups="pdk" remote="aosp" />
 
     <project path="device/drm_tester"
              name="Grometheus/minimal_drm_tester.git"
