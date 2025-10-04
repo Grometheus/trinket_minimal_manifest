@@ -14,7 +14,7 @@
   <project name="platform/external/libpng" path="external/libpng"/>
   <project name="platform/external/zlib" path="external/zlib" />
   <project name="platform/external/freetype" path="external/freetype"/>
-
+  <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
 
 
 </manifest>
