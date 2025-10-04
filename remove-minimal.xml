@@ -810,6 +810,13 @@
     <remove-project name="platform/test/vti/dashboard"/>
     <remove-project name="platform/test/vti/fuzz_test_serving"/>
     <remove-project name="platform/test/vti/test_serving"/>
+    <remove-project name="platform/test/vts-testcase/fuzz"/>
+    <remove-project name="platform/test/vts-testcase/hal-trace"/>
+    <remove-project name="platform/test/vts-testcase/kernel"/>
+    <remove-project name="platform/test/vts-testcase/nbu"/>
+    <remove-project name="platform/test/vts-testcase/performance"/>
+    <remove-project name="platform/test/vts-testcase/security"/>
+    <remove-project name="platform/test/vts-testcase/vndk"/>
 
     <remove-project name="platform/tools/aadevtools"/>
     <remove-project name="platform/tools/acloud"/>
