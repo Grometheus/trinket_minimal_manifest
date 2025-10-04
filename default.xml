@@ -13,11 +13,17 @@
    <project path="build/soong" name="android_build_soong" remote="TeamWin" revision="android-12.1" />
 
    <project name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="LineageOS" revision="lineage-19.1" />
+    
 
+  <project path="external/libpng" name="platform/external/libpng" groups="pdk" />
+  <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
 
     <project path="device/drm_tester"
              name="Grometheus/minimal_drm_tester.git"
              remote="github"
              revision="main" />
-
+    <project path="device/miniuitwrp"
+             name="Grometheus/minuitwrp.git"
+             remote="github"
+             revision="main" />
 </manifest>
