@@ -779,7 +779,6 @@
     <remove-project name="platform/prebuilts/remoteexecution-client" />
     <remove-project name="platform/prebuilts/runtime" />
     <remove-project name="platform/prebuilts/r8" />
-    <remove-project name="platform/prebuilts/tools"/>
 
     <remove-project name="platform/system/bpf"/>
     <remove-project name="platform/system/bpfprogs"/>
