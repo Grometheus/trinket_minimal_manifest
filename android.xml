@@ -22,6 +22,7 @@
   <project name="platform/external/zlib" path="external/zlib" />
   <project name="platform/external/freetype" path="external/freetype"/>
 
+ <project path="test/vts" name="platform/test/vts" groups="vts,pdk" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio,pdk-qcom" />
   <project path="kernel/configs" name="kernel/configs" groups="vts,pdk" />
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
