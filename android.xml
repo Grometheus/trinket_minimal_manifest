@@ -10,11 +10,10 @@
 
   <contactinfo bugurl="go/repo-bug" />
   
-  <project path="external/libpng" name="platform/external/libpng" groups="pdk" />
 
-    <project name="platform/external/libpng" path="external/libpng"/>
-    <project name="platform/external/zlib" path="external/zlib" />
-    <project name="platform/external/freetype" path="external/freetype"/>
+  <project name="platform/external/libpng" path="external/libpng"/>
+  <project name="platform/external/zlib" path="external/zlib" />
+  <project name="platform/external/freetype" path="external/freetype"/>
 
 
 
