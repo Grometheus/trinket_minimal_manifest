@@ -36,6 +36,8 @@
         <linkfile src="root.bp" dest="Android.bp" />
         <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
+    <!-- Include for legacy wrappedkey support -->
+    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="LineageOS" revision="lineage-19.1" />
 
     <project
         path="prebuilts/tools-lineage"
