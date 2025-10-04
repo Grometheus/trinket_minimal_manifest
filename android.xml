@@ -16,7 +16,7 @@
   <project path="prebuilts/vndk/v29" name="platform/prebuilts/vndk/v29" groups="pdk" clone-depth="1" />
   <project path="prebuilts/vndk/v30" name="platform/prebuilts/vndk/v30" groups="pdk" clone-depth="1" />
   <project path="prebuilts/vndk/v31" name="platform/prebuilts/vndk/v31" groups="pdk" clone-depth="1" />
-
+  <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
 
   <project name="platform/external/libpng" path="external/libpng"/>
   <project name="platform/external/zlib" path="external/zlib" />
