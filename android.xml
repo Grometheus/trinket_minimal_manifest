@@ -48,4 +48,5 @@
   <project path="system/tools/sysprop" name="platform/system/tools/sysprop" groups="pdk" />
   <project path="system/tools/xsdc" name="platform/system/tools/xsdc" groups="pdk" />
   <project path="system/apex" name="platform/system/apex" groups="pdk" />
+  <project path="external/v4l2_codec2" name="platform/external/v4l2_codec2" groups="pdk" />
 </manifest>
