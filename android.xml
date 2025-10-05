@@ -40,6 +40,11 @@
 
 
   <project
+    path="system/libhwbinder"
+    name="platform/system/libhwbinder"
+    groups="pdk"
+    clone-depth="1" />
+  <project
     path="frameworks/native"
     name="platform/frameworks/native"
     groups="pdk"
