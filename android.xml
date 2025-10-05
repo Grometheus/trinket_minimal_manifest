@@ -64,7 +64,6 @@
   <project path="system/tools/sysprop" name="platform/system/tools/sysprop" groups="pdk" />
   <project path="system/tools/xsdc" name="platform/system/tools/xsdc" groups="pdk" />
   <project path="system/apex" name="platform/system/apex" groups="pdk" />
-  <project path="external/v4l2_codec2" name="platform/external/v4l2_codec2" groups="pdk" />
     <project path="packages/modules/Connectivity" name="platform/packages/modules/Connectivity" groups="pdk-cw-fs,pdk-fs" />
     <project path="system/libufdt" name="platform/system/libufdt" groups="pdk" />
   <project path="system/libvintf" name="platform/system/libvintf" groups="pdk" />
