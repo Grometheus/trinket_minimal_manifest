@@ -34,4 +34,5 @@
   <project path="prebuilts/vndk/v31" name="platform/prebuilts/vndk/v31" groups="pdk" clone-depth="1" />
 
     <project path="kernel/configs" name="kernel/configs" groups="vts,pdk" />
+    <project path="system/tools/hidl" name="platform/system/tools/hidl" groups="pdk" />
 </manifest>
