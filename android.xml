@@ -37,6 +37,8 @@
     <project path="system/tools/hidl" name="platform/system/tools/hidl" groups="pdk" />
     <project path="system/tools/aidl" name="platform/system/tools/aidl" groups="pdk" />
     <project path="system/tools/xsdc" name="platform/system/tools/xsdc" groups="pdk" />
+    <project path="system/libbase" name="platform/system/libbase" groups="pdk" />
+    <project path="system/logging" name="platform/system/logging" groups="pdk" />
 
 
   <project
