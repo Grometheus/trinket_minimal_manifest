@@ -37,7 +37,36 @@
         <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
     <!-- Include for legacy wrappedkey support -->
-    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="LineageOS" revision="lineage-19.1" />
+      <project
+        path="hardware/interfaces/boot"
+        name="android_hardware_interfaces_boot"
+        remote="LineageOS"
+        revision="lineage-19.1"
+    />
+    <project
+        path="hardware/interfaces/health"
+        name="android_hardware_interfaces_health"
+        remote="LineageOS"
+        revision="lineage-19.1"
+    />
+    <project
+        path="hardware/interfaces/keymaster"
+        name="android_hardware_interfaces_keymaster"
+        remote="LineageOS"
+        revision="lineage-19.1"
+    />
+    <project
+        path="hardware/interfaces/power"
+        name="android_hardware_interfaces_power"
+        remote="LineageOS"
+        revision="lineage-19.1"
+    />
+    <project
+        path="hardware/interfaces/vibrator"
+        name="android_hardware_interfaces_vibrator"
+        remote="LineageOS"
+        revision="lineage-19.1"
+    />
 
     <project
         path="prebuilts/tools-lineage"
