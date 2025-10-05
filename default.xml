@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
     <!-- Remotes -->
     <remote name="TeamWin" fetch="https://github.com/TeamWin" />
     <remote name="LineageOS" fetch="https://github.com/LineageOS" />
@@ -10,7 +11,7 @@
         review="https://android-review.googlesource.com/"
     />
 
-    <!-- Use TeamWin repos for full recovery compatibility -->
+    <!-- Core build system -->
     <project
         path="build/make"
         name="android_build"
@@ -37,32 +38,13 @@
         <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
 
+    <!-- Tooling prebuilts -->
     <project
         path="prebuilts/tools-lineage"
         name="android_prebuilts_tools-lineage"
         remote="LineageOS"
         revision="lineage-19.1"
     />
-
-    <project
-        path="vendor/twrp"
-        name="android_vendor_twrp"
-        remote="TeamWin"
-        revision="android-12.1"
-    />
-
-    <project path="external/icu" name="android_external_icu" remote="TeamWin" revision="android-12.1"/>
-    <project path="external/libxml2" name="android_external_libxml2" remote="TeamWin" revision="android-12.1"/>
-    <project path="external/python3" name="android_external_python3" remote="TeamWin" revision="android-12.1"/>
-    <project path="external/sqlite" name="android_external_sqlite" remote="TeamWin" revision="android-12.1"/>
-    <project path="packages/modules/adb" name="android_packages_modules_adb" remote="TeamWin" revision="android-12.1"/>
-    <project path="system/core" name="android_system_core" remote="TeamWin" revision="android-12.1"/>
-    <project path="system/libhwbinder" name="android_system_libhwbinder" remote="TeamWin" revision="android-12.1"/>
-    <project path="system/security" name="android_system_security" remote="TeamWin" revision="android-12.1"/>
-    <project path="system/update_engine" name="android_system_update_engine" remote="TeamWin" revision="android-12.1"/>
-    <project path="system/vold" name="android_system_vold" remote="TeamWin" revision="android-12.1"/>
-    <project path="system/extras" name="android_system_extras" remote="TeamWin" revision="android-12.1"/>
-
     <project
         name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9"
         path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"
@@ -72,20 +54,47 @@
         revision="lineage-19.1"
     />
 
+    <!-- Vendor tree -->
+    <project
+        path="vendor/twrp"
+        name="android_vendor_twrp"
+        remote="TeamWin"
+        revision="android-12.1"
+    />
+
+    <!-- Recovery essentials -->
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="TeamWin" revision="android-12.1" />
+    <project path="system/core" name="android_system_core" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/vold" name="android_system_vold" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/sepolicy" name="android_system_sepolicy" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/extras" name="android_system_extras" remote="TeamWin" revision="android-12.1"/>
+
+    <!-- Core external libraries -->
+    <project path="external/libxml2" name="android_external_libxml2" remote="TeamWin" revision="android-12.1"/>
+    <project path="external/icu" name="android_external_icu" remote="TeamWin" revision="android-12.1"/>
+    <project path="external/sqlite" name="android_external_sqlite" remote="TeamWin" revision="android-12.1"/>
+    <project path="external/freetype" name="platform/external/freetype" remote="aosp" revision="android-12.1.0_r4"/>
+    <project path="external/zlib" name="platform/external/zlib" remote="aosp" revision="android-12.1.0_r4"/>
+    <project path="external/libpng" name="platform/external/libpng" remote="aosp" revision="android-12.1.0_r4"/>
+
+    <!-- Needed for decryption and update logic -->
+    <project path="system/libhwbinder" name="android_system_libhwbinder" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/security" name="android_system_security" remote="TeamWin" revision="android-12.1"/>
+    <project path="system/update_engine" name="android_system_update_engine" remote="TeamWin" revision="android-12.1"/>
+
+    <!-- Device-level add‑ons -->
     <project
         path="device/drm_tester"
         name="Grometheus/minimal_drm_tester.git"
         remote="github"
         revision="main"
     />
-
     <project
         path="device/miniuitwrp"
         name="Grometheus/minuitwrp.git"
         remote="github"
         revision="main"
     />
-
     <project
         path="device/soong"
         name="Grometheus/deviceSoong.git"
@@ -93,18 +102,20 @@
         revision="main"
     />
 
+    <!-- Minimal hardware interfaces for recovery -->
+    <project path="hardware/interfaces/boot" name="platform/hardware/interfaces/boot" remote="aosp" revision="android-12.1.0_r4" />
+    <project path="hardware/interfaces/health" name="platform/hardware/interfaces/health" remote="aosp" revision="android-12.1.0_r4" />
+    <project path="hardware/interfaces/keymaster" name="platform/hardware/interfaces/keymaster" remote="aosp" revision="android-12.1.0_r4" />
+    <project path="hardware/interfaces/power" name="platform/hardware/interfaces/power" remote="aosp" revision="android-12.1.0_r4" />
+    <project path="hardware/interfaces/vibrator" name="platform/hardware/interfaces/vibrator" remote="aosp" revision="android-12.1.0_r4" />
 
-
-    <include name="android.xml" />
-
-
-    <!-- Common qcom repos -->
+    <!-- Qualcomm common trees (optional, keep if your device is QCOM based) -->
     <project name="android_device_qcom_common" path="device/qcom/common" remote="TeamWin" revision="android-12.1" />
     <project name="android_device_qcom_twrp-common" path="device/qcom/twrp-common" remote="TeamWin" revision="android-12.1" />
     <project name="android_hardware_qcom_bootctrl" path="hardware/qcom-caf/bootctrl" remote="LineageOS" revision="lineage-19.1-caf" />
-    <project name="android_vendor_qcom_opensource_display-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/display" remote="LineageOS" revision="lineage-19.1" />
-    <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="LineageOS" revision="lineage-19.1" />
     <project name="android_vendor_qcom_opensource_vibrator" path="vendor/qcom/opensource/vibrator" remote="LineageOS" revision="lineage-19.1" />
 
+    <!-- Include device-specific local manifest -->
+    <include name="android.xml" />
 
 </manifest>
