@@ -1,68 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <!-- Remote & default -->
+  <remote
+      name="aosp"
+      fetch="https://android.googlesource.com"
+      review="https://android-review.googlesource.com/"
+  />
+  <default
+      revision="refs/tags/android-12.1.0_r4"
+      remote="aosp"
+      sync-j="4"
+  />
 
-  <remote  name="aosp"
-           fetch="https://android.googlesource.com"
-           review="https://android-review.googlesource.com/" />
-  <default revision="refs/tags/android-12.1.0_r4"
-           remote="aosp"
-           sync-j="4" />
+  <!-- Core build system -->
+  <project path="build/make" name="platform/build" groups="pdk" />
+  <project path="build/blueprint" name="platform/build/blueprint" groups="pdk" />
+  <project path="build/soong" name="platform/build/soong" groups="pdk" />
+  <project path="build/soong/scripts" name="platform/build/soong/scripts" groups="pdk" />
+  <project path="build/soong/genrule" name="platform/build/soong/genrule" groups="pdk" />
 
-  <contactinfo bugurl="go/repo-bug" />
-  
+  <!-- Essential prebuilts (tools & go environment) -->
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="pdk" clone-depth="1" />
-  <project path="prebuilts/bundletool" name="platform/prebuilts/bundletool" groups="pdk" clone-depth="1" />
-  <project path="prebuilts/vndk/v28" name="platform/prebuilts/vndk/v28" groups="pdk" clone-depth="1" />
-  <project path="prebuilts/vndk/v29" name="platform/prebuilts/vndk/v29" groups="pdk" clone-depth="1" />
-  <project path="prebuilts/vndk/v30" name="platform/prebuilts/vndk/v30" groups="pdk" clone-depth="1" />
-  <project path="prebuilts/vndk/v31" name="platform/prebuilts/vndk/v31" groups="pdk" clone-depth="1" />
-  <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
+  <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="pdk" clone-depth="1" />
+  <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" clone-depth="1" />
 
-  <project name="platform/external/libpng" path="external/libpng"/>
-  <project name="platform/external/zlib" path="external/zlib" />
-  <project name="platform/external/freetype" path="external/freetype"/>
+  <!-- Recovery core -->
+  <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
 
-  <project path="test/vts" name="platform/test/vts" groups="vts,pdk" />
-  <project path="test/vts-testcase/fuzz" name="platform/test/vts-testcase/fuzz" groups="vts,projectarch,pdk" />
-  <project path="test/vts-testcase/hal" name="platform/test/vts-testcase/hal" groups="vts,pdk" />
-  <project path="test/vts-testcase/hal-trace" name="platform/test/vts-testcase/hal-trace" groups="vts,pdk" />
-  <project path="test/vts-testcase/kernel" name="platform/test/vts-testcase/kernel" groups="vts,pdk" />
-  <project path="test/vts-testcase/nbu" name="platform/test/vts-testcase/nbu" groups="vts,projectarch,pdk" />
-  <project path="test/vts-testcase/performance" name="platform/test/vts-testcase/performance" groups="vts,projectarch,pdk" />
-  <project path="test/vts-testcase/security" name="platform/test/vts-testcase/security" groups="vts,projectarch,pdk" />
-  <project path="test/vts-testcase/vndk" name="platform/test/vts-testcase/vndk" groups="vts,pdk" />  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio,pdk-qcom" />
-
-    <project
-        path="hardware/interfaces/boot"
-        name="platform/hardware/interfaces/boot"
-    />
-    <project
-        path="hardware/interfaces/health"
-        name="platform/hardware/interfaces/health"
-    />
-    <project
-        path="hardware/interfaces/keymaster"
-        name="platform/hardware/interfaces/keymaster"
-    />
-    <project
-        path="hardware/interfaces/power"
-        name="platform/hardware/interfaces/power"
-    />
-    <project
-        path="hardware/interfaces/vibrator"
-        name="platform/hardware/interfaces/vibrator"
-    />
-  <project path="kernel/configs" name="kernel/configs" groups="vts,pdk" />
-  <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
-  <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="linux,pdk,tradefed" clone-depth="1" />
-  <project path="external/golang-protobuf" name="platform/external/golang-protobuf" groups="pdk" />
-  <project path="external/squashfs-tools" name="platform/external/squashfs-tools" groups="pdk" />
-  <project path="external/starlark-go" name="platform/external/starlark-go" groups="pdk" />
-  <project path="system/tools/aidl" name="platform/system/tools/aidl" groups="pdk" />
-  <project path="system/tools/hidl" name="platform/system/tools/hidl" groups="pdk" />
-  <project path="system/tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="pdk" />
-  <project path="system/tools/sysprop" name="platform/system/tools/sysprop" groups="pdk" />
-  <project path="system/tools/xsdc" name="platform/system/tools/xsdc" groups="pdk" />
-    <project path="system/libufdt" name="platform/system/libufdt" groups="pdk" />
+  <!-- System base needed for recovery -->
+  <project path="system/core" name="platform/system/core" groups="pdk" />
+  <project path="system/vold" name="platform/system/vold" groups="pdk" />
+  <project path="system/sepolicy" name="platform/system/sepolicy" groups="pdk" />
+  <project path="system/libufdt" name="platform/system/libufdt" groups="pdk" />
   <project path="system/libvintf" name="platform/system/libvintf" groups="pdk" />
+  <project path="system/tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="pdk" />
+
+  <!-- Minimal hardware interfaces required for decryption, slots, health, etc. -->
+  <project path="hardware/interfaces/boot" name="platform/hardware/interfaces/boot" />
+  <project path="hardware/interfaces/health" name="platform/hardware/interfaces/health" />
+  <project path="hardware/interfaces/keymaster" name="platform/hardware/interfaces/keymaster" />
+  <project path="hardware/interfaces/power" name="platform/hardware/interfaces/power" />
+  <project path="hardware/interfaces/vibrator" name="platform/hardware/interfaces/vibrator" />
+
+  <!-- External libraries normally used by recovery -->
+  <project path="external/zlib" name="platform/external/zlib" />
+  <project path="external/libpng" name="platform/external/libpng" />
+  <project path="external/freetype" name="platform/external/freetype" />
+  <project path="external/squashfs-tools" name="platform/external/squashfs-tools" />
+
 </manifest>
