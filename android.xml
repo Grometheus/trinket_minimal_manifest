@@ -38,5 +38,9 @@
     <project path="system/tools/aidl" name="platform/system/tools/aidl" groups="pdk" />
     <project path="system/tools/xsdc" name="platform/system/tools/xsdc" groups="pdk" />
 
-    <project path="system/libhwbinder" name="platform/system/libhwbinder" groups="pdk" />
+  <project
+    path="system/libbinder_ndk"
+    name="platform/system/libbinder_ndk"
+    groups="pdk"
+    clone-depth="1" />
 </manifest>
