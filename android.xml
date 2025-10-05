@@ -20,5 +20,5 @@
   <project path="system/tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="pdk" />
   <project path="system/libufdt" name="platform/system/libufdt" groups="pdk" />
   <project path="system/libvintf" name="platform/system/libvintf" groups="pdk" />
-
+  <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="pdk" clone-depth="1" />
 </manifest>
