@@ -57,7 +57,6 @@
     <project path="external/sqlite" name="android_external_sqlite" remote="TeamWin" revision="android-12.1"/>
     <project path="packages/modules/adb" name="android_packages_modules_adb" remote="TeamWin" revision="android-12.1"/>
     <project path="system/core" name="android_system_core" remote="TeamWin" revision="android-12.1"/>
-    <project path="system/libhidl" name="android_system_libhidl" remote="TeamWin" revision="android-12.1"/>
     <project path="system/libhwbinder" name="android_system_libhwbinder" remote="TeamWin" revision="android-12.1"/>
     <project path="system/security" name="android_system_security" remote="TeamWin" revision="android-12.1"/>
     <project path="system/update_engine" name="android_system_update_engine" remote="TeamWin" revision="android-12.1"/>
