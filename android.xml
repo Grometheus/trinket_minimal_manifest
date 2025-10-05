@@ -26,6 +26,7 @@
   <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="pdk" clone-depth="1" />
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" clone-depth="1" />
     <project path="external/golang-protobuf" name="platform/external/golang-protobuf" groups="pdk" />
+    <project path="external/starlark-go" name="platform/external/starlark-go" groups="pdk" />
 
     <project path="prebuilts/vndk/v28" name="platform/prebuilts/vndk/v28" groups="pdk" clone-depth="1" />
   <project path="prebuilts/vndk/v29" name="platform/prebuilts/vndk/v29" groups="pdk" clone-depth="1" />
