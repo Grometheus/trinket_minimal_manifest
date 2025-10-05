@@ -37,6 +37,9 @@
              remote="github" revision="main" />
 
 
+        <project path="system/libhidl" name="android_system_libhidl" remote="TeamWin" revision="android-12.1"/>
+
+
     <project path="hardware/interfaces" name="android_hardware_interfaces" remote="LineageOS" revision="lineage-19.1" />
 
     <include name="android.xml" />
