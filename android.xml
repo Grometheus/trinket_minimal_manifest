@@ -31,12 +31,27 @@
   <project path="test/vts-testcase/performance" name="platform/test/vts-testcase/performance" groups="vts,projectarch,pdk" />
   <project path="test/vts-testcase/security" name="platform/test/vts-testcase/security" groups="vts,projectarch,pdk" />
   <project path="test/vts-testcase/vndk" name="platform/test/vts-testcase/vndk" groups="vts,pdk" />  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio,pdk-qcom" />
-<project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
-<project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
 
-    <project path="packages/modules/NeuralNetworks" name="platform/packages/modules/NeuralNetworks" groups="pdk-cw-fs,pdk-fs" />
-
+    <project
+        path="hardware/interfaces/boot"
+        name="platform/hardware/interfaces/boot"
+    />
+    <project
+        path="hardware/interfaces/health"
+        name="platform/hardware/interfaces/health"
+    />
+    <project
+        path="hardware/interfaces/keymaster"
+        name="platform/hardware/interfaces/keymaster"
+    />
+    <project
+        path="hardware/interfaces/power"
+        name="platform/hardware/interfaces/power"
+    />
+    <project
+        path="hardware/interfaces/vibrator"
+        name="platform/hardware/interfaces/vibrator"
+    />
   <project path="kernel/configs" name="kernel/configs" groups="vts,pdk" />
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="linux,pdk,tradefed" clone-depth="1" />
